@@ -16,24 +16,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Movement
+        //Rörelse
+        //Rotera åt vänster
         if(Input.GetKey(KeyCode.A)){
             rb.rotation = rb.rotation + rotSpeed;
         }
-
+        //Rotera åt höger
         if (Input.GetKey(KeyCode.D))
         {
             rb.rotation = rb.rotation - rotSpeed;
         }
-
+        //Framåt
         if (Input.GetKey(KeyCode.W))
         {
             transform.position = transform.position + transform.up * moveSpeed * Time.fixedDeltaTime;
         }
 
+        //Bakåt
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position = transform.position + transform.up * -moveSpeed * Time.fixedDeltaTime;
+            transform.position = transform.position + transform.up * -moveSpeed * 0.55f * Time.fixedDeltaTime;
         }
 
 
