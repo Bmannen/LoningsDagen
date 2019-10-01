@@ -7,6 +7,7 @@ public class SesamOpen : MonoBehaviour
     public Collider2D door;
     private bool näraDörr = false;
     private bool dörrÖpen = false;
+    private bool harAnvänts = false;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -20,14 +21,18 @@ public class SesamOpen : MonoBehaviour
     {
         if (näraDörr == true && Input.GetKeyDown(KeyCode.E) && dörrÖpen == false)
         {
-            transform.Rotate(0, 0, 90);
+            transform.Rotate(0, 0, -90);
             dörrÖpen = true;
+            harAnvänts = true;
         }
 
-        if (näraDörr == true && Input.GetKeyDown(KeyCode.E) && dörrÖpen == true)
+        if (näraDörr == true && Input.GetKeyDown(KeyCode.E) && dörrÖpen == true && harAnvänts == false)
         {
-            transform.Rotate(0, 0, 270);
+            transform.Rotate(0, 0, 90);
+            dörrÖpen = false;
         }
+
+        harAnvänts = false;
 
     }
 
