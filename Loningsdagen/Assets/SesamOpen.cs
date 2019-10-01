@@ -21,14 +21,17 @@ public class SesamOpen : MonoBehaviour
     {
         if (näraDörr == true && Input.GetKeyDown(KeyCode.E) && dörrÖpen == false)
         {
-            transform.Rotate(0, 0, -90);
+            transform.Rotate(0, 0, -80);
+            transform.position = transform.position + transform.up * 0.85f + transform.right * -0.4f;
             dörrÖpen = true;
             harAnvänts = true;
         }
 
         if (näraDörr == true && Input.GetKeyDown(KeyCode.E) && dörrÖpen == true && harAnvänts == false)
         {
-            transform.Rotate(0, 0, 90);
+            transform.position = transform.position - transform.up * 0.85f - transform.right * -0.4f;
+            transform.Rotate(0, 0, 80);
+            
             dörrÖpen = false;
         }
 
