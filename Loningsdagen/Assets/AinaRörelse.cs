@@ -22,7 +22,7 @@ public class AinaRörelse : MonoBehaviour
         yPos = transform.position.y;
         xPos = transform.position.x;
 
-        if (yPos > 8 && rb.rotation == 0)
+        if (yPos > 8 && rb.rotation < 10 && rb.rotation > -10)
         {
             
             rb.rotation = rb.rotation + 90;
@@ -44,7 +44,7 @@ public class AinaRörelse : MonoBehaviour
         if (xPos > 16 && rb.rotation == 270 && yPos < 8)
         {
 
-            rb.rotation = 0;
+            rb.rotation = rb.rotation - 270;
             transform.position.Set(16f, yPos, 0);
 
         }
