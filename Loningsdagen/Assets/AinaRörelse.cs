@@ -29,19 +29,19 @@ public class AinaRörelse : MonoBehaviour
             transform.position.Set(xPos, 8f, 0);
             
         }
-        if (xPos < 6 && rb.rotation == 90)
+        if (xPos < 6 && rb.rotation < 100 && rb.rotation > 80)
         {
             rb.rotation = rb.rotation + 90;
             transform.position.Set(5f, yPos, 0);
         }
-        if (yPos < 2 && rb.rotation == 180)
+        if (yPos < 2 && rb.rotation < 190 && rb.rotation > 170)
         {
 
             rb.rotation = rb.rotation + 90;
             transform.position.Set(xPos, 1f, 0);
 
         }
-        if (xPos > 16 && rb.rotation == 270 && yPos < 8)
+        if (xPos > 16 && rb.rotation < 280 && rb.rotation > 260 && yPos < 8)
         {
 
             rb.rotation = rb.rotation - 270;
