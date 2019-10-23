@@ -18,12 +18,12 @@ public class PlayerAction : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D hand)
+    private void OnColliderEnter2D(Collider2D hand)
     {
-
+        Debug.Log("Rör i Aina");
     }
 
-    private void OnTriggerStay2D(Collider2D hand)
+    private void OnCollisionStay2D(Collider2D hand)
     {
         if (hand.gameObject.tag == "Aina")
         {
