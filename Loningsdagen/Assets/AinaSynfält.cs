@@ -6,6 +6,8 @@ public class AinaSynfält : MonoBehaviour
 {
     public Collider2D synfält;
     private bool skaSkjutas = false;
+    double timer = 3;
+    public Object player;
  
 
     // Start is called before the first frame update
@@ -19,20 +21,28 @@ public class AinaSynfält : MonoBehaviour
     {
         if(skaSkjutas == true)
         {
-            Debug.Log("Skjut");
+            timer = timer - Time.deltaTime;
+            Debug.Log(timer);
+            if(timer <= 0)
+            {
+                Destroy(player); 
+            }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D synfält)
     {
-        if (synfält.gameObject.name == "Player") 
-        {
-            Debug.Log("Skjut Ove");
-        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D synfält)
     {
+        if (synfält.gameObject.name == "Player")
+        {
+            skaSkjutas = true;
+            Debug.Log("Skjut Ove");
+        }
         
     }
 
