@@ -44,7 +44,6 @@ public class SesamOpen : MonoBehaviour
         if (door.gameObject.name == "Player")
         {
             näraDörr = true;
-            Debug.Log("Vid väggen");
         }
         
     }

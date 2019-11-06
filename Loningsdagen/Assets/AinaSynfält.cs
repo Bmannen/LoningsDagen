@@ -6,7 +6,7 @@ public class AinaSynfält : MonoBehaviour
 {
     public Collider2D synfält;
     private bool skaSkjutas = false;
-    double timer = 3;
+    double timer = 1;
     public Object player;
  
 
