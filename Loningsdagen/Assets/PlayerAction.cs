@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour 
 {
-    public Collider2D hand;
+    public Collider2D handen;
     private bool interactable;
     // Start is called before the first frame update
     void Start()
@@ -18,17 +18,18 @@ public class PlayerAction : MonoBehaviour
         
     }
 
-    private void OnColliderEnter2D(Collider2D hand)
+    private void OnCollisionEnter2D(Collision2D hand)
     {
-        Debug.Log("Rör i Aina");
+        
     }
 
-    private void OnCollisionStay2D(Collider2D hand)
+    private void OnCollisionStay2D(Collision2D hand)
     {
+        
         if (hand.gameObject.tag == "Aina")
         {
             interactable = true;
-            Debug.Log("Here's Jonny");
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Destroy(hand.gameObject);
@@ -37,7 +38,7 @@ public class PlayerAction : MonoBehaviour
 
     }
 
-    private void OnTriggerExit2D(Collider2D hand)
+    private void OnCollisionExit2D(Collision2D hand)
     {
         interactable = false;
     }
