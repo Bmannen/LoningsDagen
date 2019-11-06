@@ -41,7 +41,12 @@ public class SesamOpen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D door)
     {
-        näraDörr = true;
+        if (door.gameObject.name == "Player")
+        {
+            näraDörr = true;
+            Debug.Log("Vid väggen");
+        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D door)
