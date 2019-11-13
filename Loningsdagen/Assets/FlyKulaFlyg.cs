@@ -17,4 +17,18 @@ public class FlyKulaFlyg : MonoBehaviour
     {
         transform.position = transform.position + transform.up * Time.fixedDeltaTime * bulletSpeed;
     }
+
+    private void OnCollisionStay2D(Collision2D kula)
+    {
+        if (kula.gameObject.tag == "Aina")
+        {
+            Destroy(kula.gameObject);  
+        }
+        if (kula.gameObject.name != "Player")
+        {
+            Destroy(this.gameObject);
+        }
+        
+
+    }
 }

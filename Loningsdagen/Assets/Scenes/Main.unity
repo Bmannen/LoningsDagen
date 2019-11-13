@@ -5506,6 +5506,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 6809483014101259658, guid: 3c1bb6efd1b88964f90d55ea5af9c6c4,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 699000003}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c1bb6efd1b88964f90d55ea5af9c6c4, type: 3}
 --- !u!1001 &566840670
@@ -7465,6 +7470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   harPistol: 1
+  antalSkott: 3
   hylsa: {fileID: 3309827753723204635, guid: 3cd4a6b8bd290bb4799364a9603fd480, type: 3}
 --- !u!1001 &704015123
 PrefabInstance:

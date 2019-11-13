@@ -25,7 +25,6 @@ public class PlayerAction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D hand)
     {
-        
         if (hand.gameObject.tag == "Aina")
         {
             interactable = true;

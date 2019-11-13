@@ -6,8 +6,10 @@ public class Skjutande : MonoBehaviour
 {
 
     public bool harPistol = true; //Ändra när han plockar upp pistol
+    public int antalSkott = 3;
     public GameObject hylsa;
     GameObject skott;
+    float inteMaskingevär;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +20,17 @@ public class Skjutande : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (harPistol)
+        if (harPistol && antalSkott > 0)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (inteMaskingevär > 0)
             {
-                Debug.Log("Försöker skjuta");
-                skott = Instantiate(hylsa, transform.position , transform.rotation);
-
+                inteMaskingevär = inteMaskingevär - Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.Space) && inteMaskingevär <= 0)
+            {
+                inteMaskingevär = 1;
+                skott = Instantiate(hylsa, transform.position + transform.up * 0.5f, transform.rotation);
+                antalSkott = antalSkott - 1;
             }
         }
     }
