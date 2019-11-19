@@ -35,7 +35,7 @@ public class PlayerAction : MonoBehaviour
                 Destroy(hand.gameObject);
             }
         }
-        if (hand.gameObject.tag == "Pengar")
+        if (hand.gameObject.tag == "Pengar" && jagHarStålarna == false)
         {
             interactable = true;
 
