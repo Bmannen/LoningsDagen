@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3432379207898763261}
   - component: {fileID: 3432379207898763200}
   - component: {fileID: 3432379207898763203}
-  - component: {fileID: 3432379207898763206}
   - component: {fileID: 3432379207898763201}
+  - component: {fileID: 7512715081145342673}
   m_Layer: 0
   m_Name: "D\xF6rr horisontell"
   m_TagString: Untagged
@@ -124,32 +124,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 3.3626595}
   m_EdgeRadius: 0
---- !u!61 &3432379207898763206
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3432379207898763260}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00000023841858}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 0.43148947}
-  m_EdgeRadius: 0
 --- !u!50 &3432379207898763201
 Rigidbody2D:
   serializedVersion: 4
@@ -171,3 +145,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!68 &7512715081145342673
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432379207898763260}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
