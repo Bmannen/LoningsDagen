@@ -6,6 +6,7 @@ public class PlayerAction : MonoBehaviour
 {
     public Collider2D handen;
     private bool interactable;
+    public bool jagHarStålarna = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,16 @@ public class PlayerAction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Destroy(hand.gameObject);
+            }
+        }
+        if (hand.gameObject.tag == "Pengar")
+        {
+            interactable = true;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(hand.gameObject);
+                jagHarStålarna = true;
             }
         }
 
