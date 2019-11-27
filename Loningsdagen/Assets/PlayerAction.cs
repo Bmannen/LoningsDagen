@@ -26,6 +26,7 @@ public class PlayerAction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D hand)
     {
+        Debug.Log("Jag rör i någonting");
         if (hand.gameObject.tag == "Aina")
         {
             interactable = true;
